@@ -34,11 +34,11 @@ function renderTodos() {
     todos.array.forEach((todo, index) => {
         const todoItemHTML = document.createElement('li')
         todoItemHTML.classList.add('todos-item')
-        todoItemHTML.innerHTML = '
+        todoItemHTML.innerHTML = `
 
             < div class="todo-text" >
-                <input type="checkbox" ${todo.done ? "checked" : '' } onclick='toggleStatus(${ index })'>
-                    <p class='${todo.done?' done':''}' > ${ todo.name }</p >
+                <input type="checkbox" ${todo.done ? "checked" : ''} onclick='toggleStatus(${index})'>
+                    <p class='${todo.done ? ' done' : ''}' > ${todo.name}</p >
                 </div >
             <div class="todo-actions">
                 <button onclick>
@@ -48,6 +48,6 @@ function renderTodos() {
                     <i class="fas fa-trash"></i>
                 </button>
             </div>
-        '
+        `
     })
 }
